@@ -30,4 +30,9 @@ select {
   padding: 10px 15px;
   border: 1px solid lightblue;
 }
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 3px lightblue;
+}
 </style>
