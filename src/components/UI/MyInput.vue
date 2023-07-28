@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'MyInput',
+  name: 'my-input',
   props: {
     modelValue: [String, Number],
   },
@@ -22,5 +22,10 @@ input {
   padding: 10px 15px;
   border: 1px solid lightblue;
   margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 3px lightblue;
 }
 </style>

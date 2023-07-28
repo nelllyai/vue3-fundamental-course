@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'MyButton',
+  name: 'my-button',
 };
 </script>
 
@@ -16,5 +16,10 @@ button {
   background-color: white;
   border: 1px solid lightblue;
   cursor: pointer;
+  transition: border-color .3s;
+}
+
+button:hover {
+  border-color: black;
 }
 </style>

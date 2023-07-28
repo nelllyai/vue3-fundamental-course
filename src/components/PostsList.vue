@@ -2,7 +2,7 @@
   <div v-if="posts.length > 0">
     <h3>Список постов</h3>
     <transition-group name="posts-list">
-      <PostItem v-for="post in posts" :post="post" :key="post.id" @remove="$emit('remove', post)" />
+      <post-item v-for="post in posts" :post="post" :key="post.id" @remove="$emit('remove', post)" />
     </transition-group>
   </div>
   <h3 v-else style="color: tomato;">Список постов пуст</h3>

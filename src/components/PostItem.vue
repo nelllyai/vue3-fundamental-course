@@ -6,7 +6,8 @@
       <div><strong>Описание: </strong>{{ post.body }}</div>
     </div>
     <div class="buttons-group">
-      <MyButton @click="$emit('remove', post)">Удалить</MyButton>
+      <my-button @click="$router.push(`/posts/${post.id}`)">Открыть</my-button>
+      <my-button @click="$emit('remove', post)">Удалить</my-button>
     </div>
   </div>
 </template>
@@ -28,6 +29,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
   padding: 15px;
   margin-top: 10px;
   border: 2px solid lightblue;
@@ -37,9 +39,17 @@ export default {
   position: absolute;
   top: -10px;
   right: 20px;
-  width: 20px;
-  height: 20px;
+  padding: 3px 5px;
+  /* width: 20px; */
+  /* height: 20px; */
   background-color: white;
   text-align: center;
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 </style>

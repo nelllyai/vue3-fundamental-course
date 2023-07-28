@@ -42,7 +42,6 @@ ul {
 }
 
 li {
-  /* display: flex; */
   list-style-type: none;
 }
 

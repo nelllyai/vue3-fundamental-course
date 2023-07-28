@@ -7,18 +7,13 @@
 </template>
 
 <script>
+import toggleMixin from '@/mixins/toggleMixin';
+
 export default {
-  name: 'MyDialog',
-  props: {
-    toShow: {
-      type: Boolean,
-      default: false,
-    }
-  },
-  methods: {
-    hideDialog() {
-      this.$emit('update:toShow', false);
-    },
+  name: "my-dialog",
+  mixins: [toggleMixin],
+  mounted() {
+    console.log('from component')
   }
 };
 </script>
@@ -28,6 +23,7 @@ export default {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .dialog {
